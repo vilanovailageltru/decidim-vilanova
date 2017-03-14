@@ -1,8 +1,7 @@
 # README
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
 [![Waffle](https://img.shields.io/badge/Waffle-decidim--vilanova-blue.svg?colorB=78bdf2)](https://waffle.io/MarsBased/decidim-vilanova)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

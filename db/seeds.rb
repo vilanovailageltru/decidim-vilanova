@@ -1,4 +1,4 @@
-#Decidim.seed! if Rails.env.development?
+Decidim.seed! if Rails.env.development?
 
 organization = Decidim::Organization.first || Decidim::Organization.new
 organization.scopes.destroy_all

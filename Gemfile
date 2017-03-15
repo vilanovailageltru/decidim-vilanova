@@ -10,6 +10,9 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'decidim-dev', git: 'https://github.com/AjuntamentdeBarcelona/decidim.git'
   gem 'byebug', platform: :mri
+  gem 'pry-byebug'
+  gem 'pry-coolline'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -18,6 +21,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'faker', '~> 1.7.3'
+  gem 'xray-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

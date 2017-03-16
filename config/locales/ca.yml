@@ -1,4 +1,7 @@
 ca:
+  errors:
+    messages:
+      mini_magick_processing_error: "La manipulació de la imatge ha fallat. Potser el format no és correcte? Error Original: %{e}"
   pages:
     home:
       sub_hero:

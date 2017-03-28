@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309156019) do
+ActiveRecord::Schema.define(version: 20170328072012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -166,6 +166,20 @@ ActiveRecord::Schema.define(version: 20170309156019) do
     t.index ["decidim_scope_id"], name: "index_decidim_meetings_meetings_on_decidim_scope_id", using: :btree
   end
 
+  create_table "decidim_moderations", force: :cascade do |t|
+    t.integer  "decidim_participatory_process_id",             null: false
+    t.string   "decidim_reportable_type",                      null: false
+    t.integer  "decidim_reportable_id",                        null: false
+    t.integer  "report_count",                     default: 0, null: false
+    t.datetime "hidden_at"
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.index ["decidim_participatory_process_id"], name: "decidim_moderations_participatory_process", using: :btree
+    t.index ["decidim_reportable_type", "decidim_reportable_id"], name: "decidim_moderations_reportable", unique: true, using: :btree
+    t.index ["hidden_at"], name: "decidim_moderations_hidden_at", using: :btree
+    t.index ["report_count"], name: "decidim_moderations_report_count", using: :btree
+  end
+
   create_table "decidim_newsletters", force: :cascade do |t|
     t.jsonb    "subject"
     t.jsonb    "body"
@@ -181,18 +195,18 @@ ActiveRecord::Schema.define(version: 20170309156019) do
   end
 
   create_table "decidim_organizations", force: :cascade do |t|
-    t.string   "name",                               null: false
-    t.string   "host",                               null: false
-    t.string   "default_locale",                     null: false
-    t.string   "available_locales",   default: [],                array: true
+    t.string   "name",                                    null: false
+    t.string   "host",                                    null: false
+    t.string   "default_locale",                          null: false
+    t.string   "available_locales",        default: [],                array: true
     t.jsonb    "welcome_text"
     t.string   "homepage_image"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.jsonb    "description"
     t.string   "logo"
     t.string   "twitter_handler"
-    t.boolean  "show_statistics",     default: true
+    t.boolean  "show_statistics",          default: true
     t.string   "favicon"
     t.string   "instagram_handler"
     t.string   "facebook_handler"
@@ -201,8 +215,9 @@ ActiveRecord::Schema.define(version: 20170309156019) do
     t.string   "official_img_header"
     t.string   "official_img_footer"
     t.string   "official_url"
-    t.string   "reference_prefix",                   null: false
-    t.string   "secondary_hosts",     default: [],                array: true
+    t.string   "reference_prefix",                        null: false
+    t.string   "secondary_hosts",          default: [],                array: true
+    t.string   "available_authorizations", default: [],                array: true
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true, using: :btree
     t.index ["name"], name: "index_decidim_organizations_on_name", unique: true, using: :btree
   end
@@ -268,18 +283,6 @@ ActiveRecord::Schema.define(version: 20170309156019) do
     t.index ["decidim_organization_id"], name: "index_decidim_processes_on_decidim_organization_id", using: :btree
   end
 
-  create_table "decidim_proposals_proposal_reports", force: :cascade do |t|
-    t.integer  "decidim_proposal_id", null: false
-    t.integer  "decidim_user_id",     null: false
-    t.string   "reason",              null: false
-    t.text     "details"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.index ["decidim_proposal_id", "decidim_user_id"], name: "decidim_proposals_proposal_report_proposal_user_unique", unique: true, using: :btree
-    t.index ["decidim_proposal_id"], name: "decidim_proposals_proposal_result_proposal", using: :btree
-    t.index ["decidim_user_id"], name: "decidim_proposals_proposal_result_user", using: :btree
-  end
-
   create_table "decidim_proposals_proposal_votes", force: :cascade do |t|
     t.integer  "decidim_proposal_id", null: false
     t.integer  "decidim_author_id",   null: false
@@ -304,9 +307,7 @@ ActiveRecord::Schema.define(version: 20170309156019) do
     t.string   "state"
     t.datetime "answered_at"
     t.jsonb    "answer"
-    t.integer  "report_count",          default: 0
     t.string   "reference",                         null: false
-    t.datetime "hidden_at"
     t.text     "address"
     t.float    "latitude"
     t.float    "longitude"
@@ -319,6 +320,18 @@ ActiveRecord::Schema.define(version: 20170309156019) do
     t.index ["proposal_votes_count"], name: "index_decidim_proposals_proposals_on_proposal_votes_count", using: :btree
     t.index ["state"], name: "index_decidim_proposals_proposals_on_state", using: :btree
     t.index ["title"], name: "decidim_proposals_proposal_title_search", using: :btree
+  end
+
+  create_table "decidim_reports", force: :cascade do |t|
+    t.integer  "decidim_moderation_id", null: false
+    t.integer  "decidim_user_id",       null: false
+    t.string   "reason",                null: false
+    t.text     "details"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["decidim_moderation_id", "decidim_user_id"], name: "decidim_reports_moderation_user_unique", unique: true, using: :btree
+    t.index ["decidim_moderation_id"], name: "decidim_reports_moderation", using: :btree
+    t.index ["decidim_user_id"], name: "decidim_reports_user", using: :btree
   end
 
   create_table "decidim_resource_links", force: :cascade do |t|

@@ -44,6 +44,7 @@ RUN mkdir -p tmp/pids
 # Define volumes
 
 VOLUME $HOME/public/uploads
+VOLUME $HOME/log
 
 # Configure init scripts
 RUN mkdir -p /etc/my_init.d

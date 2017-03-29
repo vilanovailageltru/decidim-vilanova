@@ -29,6 +29,9 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  config.action_controller.asset_host = "http://#{ENV['APP_HOST']}"
+  config.action_mailer.asset_host = "http://#{ENV['APP_HOST']}"
+
   config.action_mailer.smtp_settings = {
     :address        => Rails.application.secrets.smtp_address,
     :port           => Rails.application.secrets.smtp_port,

@@ -1,27 +1,10 @@
 # README
 
 [![Waffle](https://img.shields.io/badge/Waffle-decidim--vilanova-blue.svg?colorB=78bdf2)](https://waffle.io/MarsBased/decidim-vilanova)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Development
 
-* Ruby version
+### Testing emails in development
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Decidim is using the [letter_opener_web](https://github.com/fgrehm/letter_opener_web) gem. To see all emails sent in the development environment you can do it by visiting the https://localhost:3000/letter_opener URL.

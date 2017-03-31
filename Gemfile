@@ -13,6 +13,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-coolline'
   gem 'pry-rails'
+  gem 'factory_girl_rails'
+  gem 'faker', '~> 1.7.3'
 end
 
 group :development do
@@ -20,7 +22,6 @@ group :development do
   gem 'listen', '~> 3.1.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'faker', '~> 1.7.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

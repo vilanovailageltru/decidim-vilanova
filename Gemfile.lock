@@ -581,6 +581,7 @@ DEPENDENCIES
   byebug
   decidim!
   decidim-dev!
+  factory_girl_rails
   faker (~> 1.7.3)
   listen (~> 3.1.0)
   pry-byebug

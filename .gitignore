@@ -18,9 +18,13 @@
 
 # Ignore public uploads
 public/uploads
+
 # Ignore application configuration
 /config/application.yml
 
 # Ignore env variables
 .env
 .env.*
+
+# Ignore yarn libraries
+vendor/assets/node_modules

@@ -9,23 +9,23 @@ class VilanovaAuthorizationHandler < Decidim::AuthorizationHandler
   validate :censed_and_add_metadata
 
   def censed_and_add_metadata
-    errors.add(:document_number, I18n.t('errors.messages.not_censed')) unless cense
-    false
+    return if cense_for_user
+    errors.add(:document_number, I18n.t('errors.messages.not_censed'))
   end
 
   def authorized?
-    return true if cense
+    return true if cense_for_user
   end
 
   def unique_id
-    cense || nil
+    cense_for_user
   end
 
   private
 
-  def cense
-    @cense ||= CenseApi.search_user_vilanova_id(self)
-    @cense
+  def cense_for_user
+    @cense_for_user ||= CenseApi.search_user_vilanova_id(self)
+    @cense_for_user
   end
 
 end

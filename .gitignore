@@ -25,6 +25,3 @@ public/uploads
 # Ignore env variables
 .env
 .env.*
-
-# Ignore yarn libraries
-vendor/assets/node_modules

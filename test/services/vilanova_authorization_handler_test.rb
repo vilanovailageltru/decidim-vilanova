@@ -8,7 +8,7 @@ class VilanovaAuthorizationHandlerTest < Minitest::Test
   end
 
   def test_valid
-    @handle.stub :cense, 123 do
+    @handle.stub :cense_for_user, 123 do
       assert_equal true, @handle.valid?
       assert_equal 123, @handle.unique_id
     end
@@ -16,20 +16,20 @@ class VilanovaAuthorizationHandlerTest < Minitest::Test
 
   def test_invalid_empty_birthday
     @handle.birthday = ''
-    @handle.stub :cense, 123 do
+    @handle.stub :cense_for_user, 123 do
       assert_equal false, @handle.valid?
     end
   end
 
   def test_invalid_empty_document_number
     @handle.document_number = ''
-    @handle.stub :cense, 123 do
+    @handle.stub :cense_for_user, 123 do
       assert_equal false, @handle.valid?
     end
   end
 
   def test_invalid_no_censed
-    @handle.stub :cense, false do
+    @handle.stub :cense_for_user, nil do
       assert_equal false, @handle.valid?
       assert_nil @handle.unique_id
     end

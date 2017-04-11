@@ -8,8 +8,8 @@ class CenseApiTest < Minitest::Test
     @url = 'http://aj_ws.ajuntament.org/comprovaempadronament/default.aspx?data='\
            "#{@birthday}&nif=#{@document_number}"
     @ok_user_vilanova_id = 123
-    @ok_boby = "{ \"exists\": true, \"id\": #{@ok_user_vilanova_id} }"
-    @ko_body = '{ "exists": false, "id": "" }'
+    @ok_boby = "{exists:true,id:#{@ok_user_vilanova_id}}"
+    @ko_body = '{exists:false,id:}'
 
     @mock_handle = MiniTest::Mock.new
     @mock_handle.expect(:birthday, @birthday)
@@ -21,7 +21,7 @@ class CenseApiTest < Minitest::Test
       .to_return(status: 200,
                  body: @ok_boby)
 
-    assert_equal @ok_user_vilanova_id, CenseApi.search_user_vilanova_id(@mock_handle)
+    assert_equal '123', CenseApi.search_user_vilanova_id(@mock_handle)
   end
 
   def test_not_find_user

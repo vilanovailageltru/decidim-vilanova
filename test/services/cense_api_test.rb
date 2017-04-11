@@ -5,7 +5,7 @@ class CenseApiTest < Minitest::Test
   def setup
     @birthday = '22/02/1978'
     @document_number = '46464646X'
-    @url = 'http://aj_ws.ajuntament.org/comprovaempadronament/default.aspx?data='\
+    @url = 'http://mars.lvh.me?data='\
            "#{@birthday}&nif=#{@document_number}"
     @ok_user_vilanova_id = 123
     @ok_boby = "{exists:true,id:#{@ok_user_vilanova_id}}"

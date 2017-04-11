@@ -3,7 +3,8 @@ require 'httparty'
 class CenseApi
 
   def self.search_user_vilanova_id(handle)
-    response = HTTParty.get('http://aj_ws.ajuntament.org/comprovaempadronament/default.aspx',
+
+    response = HTTParty.get(Rails.application.secrets.censed_api_endpoint,
                              query: { nif: handle.document_number,
                                       data: handle.birthday },
                              format: :plain)

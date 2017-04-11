@@ -1,8 +1,20 @@
 ca:
   errors:
     messages:
+      not_censed: 'No constes com a censat a Vilanova i la Geltrú'
       mini_magick_processing_error: "La manipulació de la imatge ha fallat. Potser el format no és correcte? Error Original: %{e}"
   pages:
     home:
       sub_hero:
         register: 'ENTRA, PARTICIPA I DECIDEIX!'
+  decidim:
+    authorization_handlers:
+      vilanova_authorization_handler:
+        name: Autorització
+  activemodel:
+    models:
+      vilanova_authorization_handler: Autorització
+    attributes:
+      vilanova_authorization_handler:
+        document_number: DNI
+        birthday: Data de naixement (dd/mm/aaaa)

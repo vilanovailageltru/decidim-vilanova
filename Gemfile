@@ -15,6 +15,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'factory_girl_rails'
   gem 'faker', '~> 1.7.3'
+  gem 'webmock'
 end
 
 group :development do

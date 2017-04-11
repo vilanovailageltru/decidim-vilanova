@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require_tree .
 //= require decidim
+//= require jquery-mask-plugin/dist/jquery.mask

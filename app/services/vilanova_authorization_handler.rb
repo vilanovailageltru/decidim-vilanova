@@ -6,6 +6,7 @@ class VilanovaAuthorizationHandler < Decidim::AuthorizationHandler
   attribute :birthday, String
 
   validates :document_number, :birthday, presence: true
+  validate :older_than_16_years
   validate :censed_and_add_metadata
 
   def censed_and_add_metadata
@@ -22,6 +23,14 @@ class VilanovaAuthorizationHandler < Decidim::AuthorizationHandler
   end
 
   private
+
+  def older_than_16_years
+    parsed_birthday = Date.strptime(birthday, '%d/%m/%Y')
+    return if parsed_birthday <= 16.years.ago
+    errors.add(:birthday, I18n.t('errors.messages.younger_than_16'))
+  rescue ArgumentError
+    errors.add(:birthday, I18n.t('errors.messages.invalid_date'))
+  end
 
   def cense_for_user
     @cense_for_user ||= CenseApi.search_user_vilanova_id(self)

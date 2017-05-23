@@ -2,6 +2,8 @@ es:
   errors:
     messages:
       not_censed: 'No constas como censado en Vilanova i la Geltrú'
+      younger_than_16: 'Necesitas tener más de 16 años para participar en la plataforma.'
+      invalid_date: 'La fecha no es válida.'
       mini_magick_processing_error: "La manipulación de la imatge ha fallado. ¿Puede que el formato no sea correcto? Error Original: %{e}"
   pages:
     home:
@@ -10,10 +12,10 @@ es:
   decidim:
     authorization_handlers:
       vilanova_authorization_handler:
-        name: Autorización
+        name: Padrón Municipal
     activemodel:
       models:
-        vilanova_authorization_handler: Autorización
+        vilanova_authorization_handler: Padrón Municipal
       attributes:
         vilanova_authorization_handler:
           document_number: DNI

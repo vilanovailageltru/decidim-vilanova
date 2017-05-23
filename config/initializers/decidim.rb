@@ -9,10 +9,13 @@ Decidim.configure do |config|
   # config.available_locales = %i{en ca es}
 
   # Geocoder configuration
-  # config.geocoder = {
-  #   here_app_id: Rails.application.secrets.geocoder["here_app_id"],
-  #   here_app_code: Rails.application.secrets.geocoder["here_app_code"]
-  # }
+  geocoder_config = Rails.application.secrets.geocoder
+  if geocoder_config['here_app_id'].present? && geocoder_config['here_app_code'].present?
+    config.geocoder = {
+      here_app_id: geocoder_config['here_app_id'],
+      here_app_code: geocoder_config['here_app_code']
+    }
+  end
 
   # Currency unit
   # config.currency_unit = "€"

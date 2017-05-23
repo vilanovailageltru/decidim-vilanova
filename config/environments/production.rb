@@ -17,9 +17,7 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "decidim-vilanova_#{Rails.env}"
+  config.active_job.queue_adapter = :sidekiq
   config.action_mailer.perform_caching = false
 
   config.i18n.fallbacks = true
@@ -29,8 +27,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_controller.asset_host = "http://#{ENV['APP_HOST']}"
-  config.action_mailer.asset_host = "http://#{ENV['APP_HOST']}"
+  config.action_mailer.asset_host = ENV['APP_HOST']
 
   config.action_mailer.smtp_settings = {
     :address        => Rails.application.secrets.smtp_address,

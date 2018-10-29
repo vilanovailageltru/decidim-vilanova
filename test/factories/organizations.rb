@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :organization, class: Decidim::Organization do
     name { Faker::Company.unique.name }
     reference_prefix { Faker::Name.suffix }

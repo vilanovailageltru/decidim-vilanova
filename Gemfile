@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.4.0'
-DECIDIM_VERSION = '0.7.4'
+DECIDIM_VERSION = '0.10.1'
 
 gem 'decidim', DECIDIM_VERSION
 gem 'sidekiq'

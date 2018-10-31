@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.4.0'
 
-DECIDIM_VERSION = '0.12.0'
+DECIDIM_VERSION = '0.13.0'
 
 gem 'rails', '5.2.0'
 gem 'decidim', DECIDIM_VERSION

@@ -3,7 +3,13 @@
 Decidim.configure do |config|
   config.application_name = 'Participa Vilanova'
   config.mailer_sender    = 'participacio@vilanova.cat'
-  config.authorization_handlers = ['VilanovaAuthorizationHandler']
+
+  # Reset default workflows
+  Decidim::Verifications.clear_workflows
+
+  Decidim::Verifications.register_workflow(:vilanova_authorization_handler) do |auth|
+    auth.form = 'VilanovaAuthorizationHandler'
+  end
 
   # Uncomment this lines to set your preferred locales
   # config.available_locales = %i{en ca es}

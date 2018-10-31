@@ -13,6 +13,7 @@ es:
     authorization_handlers:
       vilanova_authorization_handler:
         name: Padrón Municipal
+        explanation: 'Verifica tu usuario contra el Padrón Municipal de Vilanova i la Geltrú'
     activemodel:
       models:
         vilanova_authorization_handler: Padrón Municipal

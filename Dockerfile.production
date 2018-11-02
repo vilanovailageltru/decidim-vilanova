@@ -1,11 +1,11 @@
-FROM phusion/passenger-ruby25
+FROM phusion/passenger-ruby25:0.9.35
 MAINTAINER MarsBased "hola@marsbased.com"
 
 ENV HOME /home/app/decidim-vilanova
 
 # Install software dependencies
 RUN apt-get update
-RUN apt-get install -y imagemagick gettext-base
+RUN apt-get install -y imagemagick gettext-base tzdata
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]

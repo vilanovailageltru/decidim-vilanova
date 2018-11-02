@@ -8,6 +8,8 @@ gem 'sidekiq'
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'letter_opener_web'
+
 group :development, :test do
   gem 'decidim-dev', git: 'https://github.com/AjuntamentdeBarcelona/decidim.git'
   gem 'byebug', platform: :mri

@@ -3,7 +3,7 @@
 Decidim.configure do |config|
   config.application_name = 'Participa Vilanova'
   config.mailer_sender    = 'participacio@vilanova.cat'
-  config.authorization_handlers = [VilanovaAuthorizationHandler]
+  config.authorization_handlers = ['VilanovaAuthorizationHandler']
 
   # Uncomment this lines to set your preferred locales
   # config.available_locales = %i{en ca es}

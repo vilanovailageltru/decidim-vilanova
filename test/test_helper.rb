@@ -8,7 +8,7 @@ require 'minitest/mock'
 module ActiveSupport
   class TestCase
 
-    include FactoryGirl::Syntax::Methods
+    include FactoryBot::Syntax::Methods
 
   end
 end

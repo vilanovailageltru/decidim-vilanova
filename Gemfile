@@ -1,31 +1,32 @@
 source 'https://rubygems.org'
 
 ruby '2.4.0'
+DECIDIM_VERSION = '0.7.4'
 
-gem 'decidim', git: 'https://github.com/AjuntamentdeBarcelona/decidim.git'
+gem 'decidim', DECIDIM_VERSION
 gem 'sidekiq'
 
-gem 'puma', '~> 3.0'
-gem 'uglifier', '>= 1.3.0'
+gem 'puma'
+gem 'uglifier'
 
 gem 'letter_opener_web'
 
 group :development, :test do
-  gem 'decidim-dev', git: 'https://github.com/AjuntamentdeBarcelona/decidim.git'
+  gem 'decidim-dev', DECIDIM_VERSION
   gem 'byebug', platform: :mri
   gem 'pry-byebug'
   gem 'pry-coolline'
   gem 'pry-rails'
-  gem 'factory_girl_rails'
-  gem 'faker', '~> 1.7.3'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'webmock'
 end
 
 group :development do
   gem 'web-console'
-  gem 'listen', '~> 3.1.0'
+  gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

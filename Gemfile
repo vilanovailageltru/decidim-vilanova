@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.4.0'
+ruby '2.5.1'
 
 DECIDIM_VERSION = '0.14.4'
 
-gem 'rails', '5.2.0'
+gem 'rails', '5.2.1'
 gem 'decidim', DECIDIM_VERSION
 gem 'sidekiq'
 

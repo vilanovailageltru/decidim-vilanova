@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+puts '== Update gems =='
+system('bundle check') || system!('bundle update')
+
+puts '== Get decidim migrates =='
+system('bin/rails decidim:upgrade')
+
+puts '== Execute migrates =='
+system('bin/rails db:migrate')

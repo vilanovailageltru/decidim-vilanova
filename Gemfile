@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.1'
 
-DECIDIM_VERSION = '0.14.4'
+DECIDIM_VERSION = '0.15.2'
 
 gem 'rails', '5.2.1'
 gem 'decidim', DECIDIM_VERSION
@@ -12,6 +12,7 @@ gem 'puma'
 gem 'uglifier'
 
 gem 'letter_opener_web'
+gem "sprockets", "~> 3.7.2"
 
 group :development, :test do
   gem 'decidim-dev', DECIDIM_VERSION

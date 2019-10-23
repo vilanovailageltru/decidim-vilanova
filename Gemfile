@@ -6,7 +6,7 @@ DECIDIM_VERSION = '0.15.2'
 
 gem 'rails', '5.2.1'
 gem 'decidim', DECIDIM_VERSION
-gem 'sidekiq'
+gem 'sidekiq', '5.2.7'
 
 gem 'puma'
 gem 'uglifier'

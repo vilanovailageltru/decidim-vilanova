@@ -767,7 +767,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen
   sprockets (~> 3.7.2)
-  tzinfo-data
   uglifier
   web-console
   webmock

@@ -354,8 +354,6 @@ GEM
     factory_bot_rails (4.11.1)
       factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
-    faker (2.6.0)
-      i18n (>= 1.6, < 1.8)
     faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
@@ -753,8 +751,6 @@ DEPENDENCIES
   byebug
   decidim (= 0.16.1)
   decidim-dev (= 0.16.1)
-  factory_bot_rails
-  faker
   letter_opener_web
   listen
   pry-byebug

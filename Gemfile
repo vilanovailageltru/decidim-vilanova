@@ -21,8 +21,6 @@ gem 'uglifier'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'decidim-dev', DECIDIM_VERSION
-  gem 'factory_bot_rails'
-  gem 'faker'
   gem 'pry-byebug'
   gem 'pry-coolline'
   gem 'pry-rails'

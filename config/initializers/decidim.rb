@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # frozen_string_literal: true
 Decidim.configure do |config|
   config.application_name = 'Participa Vilanova'
@@ -11,8 +10,8 @@ Decidim.configure do |config|
     auth.form = 'VilanovaAuthorizationHandler'
   end
 
-  # Uncomment this lines to set your preferred locales
-  # config.available_locales = %i{en ca es}
+  config.available_locales = [:ca, :es]
+  config.default_locale = :ca
 
   # Geocoder configuration
   geocoder_config = Rails.application.secrets.geocoder
@@ -24,5 +23,5 @@ Decidim.configure do |config|
   end
 
   # Currency unit
-  # config.currency_unit = "€"
+  config.currency_unit = "€"
 end

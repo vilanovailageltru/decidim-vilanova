@@ -1,5 +1,5 @@
-FROM phusion/passenger-ruby25:0.9.35
-MAINTAINER MarsBased "hola@marsbased.com"
+FROM phusion/passenger-ruby27:1.0.12
+MAINTAINER Codegram "hello@codegram.com"
 
 ENV HOME /home/app/decidim-vilanova
 

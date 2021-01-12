@@ -24,6 +24,8 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN mkdir -p $HOME
 WORKDIR $HOME
 
+RUN gem install bundler -v 1.17.3
+
 # Install bundle of gems
 ADD Gemfile Gemfile
 ADD Gemfile.lock Gemfile.lock

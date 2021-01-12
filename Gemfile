@@ -7,6 +7,7 @@ ruby '2.7.1'
 DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', tag: 'v0.23.1' }
 
 gem 'decidim', DECIDIM_VERSION
+gem 'decidim-verify_wo_registration', git: "https://github.com/CodiTramuntana/decidim-verify_wo_registration.git"
 
 gem 'rails', '~> 5.2.4.4'
 gem 'puma'

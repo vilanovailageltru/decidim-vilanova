@@ -23,7 +23,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'faker'
+  gem 'faker', "~> 1.9.6"
   gem 'letter_opener_web'
   gem 'listen'
   gem 'spring'

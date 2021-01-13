@@ -24,4 +24,6 @@ Decidim.configure do |config|
 
   # Currency unit
   config.currency_unit = "€"
+
+  config.force_ssl = false
 end

@@ -1,4 +1,6 @@
-# README
+# Decidim Vilanova
+
+[![Docker Hub](https://img.shields.io/docker/cloud/build/vilanovailageltru/decidim-vilanova.svg)](https://hub.docker.com/repository/docker/vilanovailageltru/decidim-vilanova)
 
 ## Update Decidim
 

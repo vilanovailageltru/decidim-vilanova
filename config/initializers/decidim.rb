@@ -3,9 +3,6 @@ Decidim.configure do |config|
   config.application_name = 'Participa Vilanova'
   config.mailer_sender    = 'participacio@vilanova.cat'
 
-  # Reset default workflows
-  Decidim::Verifications.clear_workflows
-
   Decidim::Verifications.register_workflow(:vilanova_authorization_handler) do |auth|
     auth.form = 'VilanovaAuthorizationHandler'
   end

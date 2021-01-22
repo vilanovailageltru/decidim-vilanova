@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   mount Decidim::Core::Engine => '/'
   mount Sidekiq::Web => '/sidekiq' if Rails.env.development?
-
+  mount Decidim::FileAuthorizationHandler::AdminEngine => '/admin'
 end

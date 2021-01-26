@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/CodiTramuntana/decidim-verify_wo_registration.git
-  revision: beae4031b1e05ff600ed1c5a3ceb88235538c439
-  specs:
-    decidim-verify_wo_registration (0.0.1)
-      decidim-budgets (>= 0.20)
-      decidim-core (>= 0.20)
-      decidim-proposals (>= 0.20)
-
-GIT
   remote: https://github.com/MarsBased/decidim-file_authorization_handler.git
   revision: dc54007dfc6b4c25c7b71f677a09d76f592d00e5
   specs:
@@ -805,7 +796,6 @@ DEPENDENCIES
   decidim!
   decidim-dev!
   decidim-file_authorization_handler!
-  decidim-verify_wo_registration!
   faker (~> 1.9.6)
   geocoder (~> 1.6.1)
   letter_opener_web

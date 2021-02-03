@@ -5,7 +5,7 @@ class VilanovaAuthorizationHandlerTest < Minitest::Test
   include ActiveSupport::Testing::TimeHelpers
 
   def setup
-    user = create :user
+    user = FactoryBot.create :user
 
     @handle = VilanovaAuthorizationHandler.new(
       user: user,

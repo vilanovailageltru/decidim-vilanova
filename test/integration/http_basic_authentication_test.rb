@@ -37,7 +37,7 @@ class HttpBasicAuthenticationTest < ActionDispatch::IntegrationTest
   private
 
   def create_password_protected_organization
-    create(:organization, http_basic_authentication_protected: true,
+    FactoryBot.create(:organization, http_basic_authentication_protected: true,
                           host: 'www.example.com')
   end
 

@@ -5,8 +5,14 @@ class VilanovaAuthorizationHandlerTest < Minitest::Test
   include ActiveSupport::Testing::TimeHelpers
 
   def setup
-    @handle = VilanovaAuthorizationHandler.new(birthday: '22/02/1978',
-                                               document_number: '46464646X')
+    user = create :user
+
+    @handle = VilanovaAuthorizationHandler.new(
+      user: user,
+      birthday: '22/02/1978',
+      document_number: '46464646X'
+    )
+
     travel_to Date.new(2017, 1, 1)
   end
 

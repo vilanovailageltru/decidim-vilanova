@@ -3,12 +3,7 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'decidim/faker/localized'
 require 'webmock/minitest'
+require "factory_bot"
 require 'minitest/mock'
 
-module ActiveSupport
-  class TestCase
-
-    include FactoryBot::Syntax::Methods
-
-  end
-end
+require "decidim/core/test/factories"

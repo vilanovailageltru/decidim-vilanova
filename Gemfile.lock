@@ -8,6 +8,14 @@ GIT
       decidim-proposals (>= 0.20)
 
 GIT
+  remote: https://github.com/EntraInAzione/decidim-module-term_customizer.git
+  revision: b336d0437ffd0bac1d9028c244db1b4a36c7f08f
+  specs:
+    decidim-term_customizer (0.23.0)
+      decidim-admin (~> 0.23.0)
+      decidim-core (~> 0.23.0)
+
+GIT
   remote: https://github.com/MarsBased/decidim-file_authorization_handler.git
   revision: dc54007dfc6b4c25c7b71f677a09d76f592d00e5
   specs:
@@ -809,6 +817,7 @@ DEPENDENCIES
   decidim!
   decidim-dev!
   decidim-file_authorization_handler!
+  decidim-term_customizer!
   decidim-verify_wo_registration!
   faker (~> 1.9.6)
   geocoder (~> 1.6.1)

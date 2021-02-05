@@ -9,6 +9,7 @@ DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'rele
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-verify_wo_registration', git: "https://github.com/CodiTramuntana/decidim-verify_wo_registration.git"
 gem 'decidim-file_authorization_handler', git: "https://github.com/MarsBased/decidim-file_authorization_handler.git"
+gem 'decidim-term_customizer', git: "https://github.com/EntraInAzione/decidim-module-term_customizer.git"
 
 gem 'rails', '~> 5.2.4.4'
 gem 'puma'

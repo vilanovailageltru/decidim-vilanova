@@ -20,6 +20,8 @@ gem 'sprockets', '~> 3.7.2'
 gem 'geocoder', '~> 1.6.1'
 gem 'uglifier'
 
+gem "httparty", "~> 0.18.1"
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'decidim-dev', DECIDIM_VERSION

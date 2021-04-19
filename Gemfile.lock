@@ -478,6 +478,9 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http_parser.rb (0.6.0)
+    httparty (0.18.1)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.34)
@@ -873,6 +876,7 @@ DEPENDENCIES
   decidim-verify_wo_registration!
   faker
   geocoder (~> 1.6.1)
+  httparty (~> 0.18.1)
   letter_opener_web
   listen
   puma

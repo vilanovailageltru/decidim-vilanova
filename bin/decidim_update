@@ -5,7 +5,7 @@ def system!(*args)
 end
 
 puts '********* Update gems *********'
-system('bundle check') || system!('bundle update decidim decidim-dev')
+system!('bundle update decidim decidim-dev decidim-verify_wo_registration decidim-file_authorization_handler decidim-term_customizer')
 
 puts '********* Get decidim migrates *********'
 system('bin/rails decidim:upgrade')

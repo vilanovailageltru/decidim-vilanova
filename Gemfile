@@ -4,14 +4,14 @@ source 'https://rubygems.org'
 
 ruby '2.7.2'
 
-DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.23-stable' }
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.24-stable' }
 
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-verify_wo_registration', git: "https://github.com/CodiTramuntana/decidim-verify_wo_registration.git"
 gem 'decidim-file_authorization_handler', git: "https://github.com/MarsBased/decidim-file_authorization_handler.git"
-gem 'decidim-term_customizer', git: "https://github.com/EntraInAzione/decidim-module-term_customizer.git"
+gem 'decidim-term_customizer', git: "https://github.com/mainio/decidim-module-term_customizer.git"
 
-gem 'rails', '~> 5.2.4.4'
+gem 'rails', '~> 5.2.5'
 gem 'puma'
 gem 'sidekiq', '5.2.7'
 gem 'sidekiq-cron'
@@ -26,7 +26,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'faker', "~> 1.9.6"
+  gem 'faker'
   gem 'letter_opener_web'
   gem 'listen'
   gem 'spring'

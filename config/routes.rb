@@ -6,7 +6,10 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: '/letter_opener'
   end
 
+  authenticate :admin do
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   mount Decidim::Core::Engine => '/'
-  mount Sidekiq::Web => '/sidekiq' if Rails.env.development?
   mount Decidim::FileAuthorizationHandler::AdminEngine => '/admin'
 end

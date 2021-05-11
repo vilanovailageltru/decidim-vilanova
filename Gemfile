@@ -22,6 +22,8 @@ gem 'uglifier'
 
 gem "httparty", "~> 0.18.1"
 
+gem "execjs", "~> 2.7.0"
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'decidim-dev', DECIDIM_VERSION

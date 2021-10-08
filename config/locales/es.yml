@@ -9,15 +9,43 @@ es:
     home:
       sub_hero:
         register: '¡ENTRA, PARTICIPA I DECIDE!'
+  activemodel:
+    models:
+      vilanova_authorization_handler: Padrón Municipal
+      decidim/proposals/rejected_proposal_event: Propuesta no aceptada
+    attributes:
+      vilanova_authorization_handler:
+        document_number: DNI
+        birthday: Fecha de nacimiento (dd/mm/aaaa)
   decidim:
     authorization_handlers:
       vilanova_authorization_handler:
         name: Padrón Municipal
         explanation: 'Verifica tu usuario contra el Padrón Municipal de Vilanova i la Geltrú'
-    activemodel:
-      models:
-        vilanova_authorization_handler: Padrón Municipal
-      attributes:
-        vilanova_authorization_handler:
-          document_number: DNI
-          birthday: Fecha de nacimiento (dd/mm/aaaa)
+    admin:
+      filters:
+        proposals:
+          state_eq:
+            values:
+              rejected: No aceptada
+    components:
+      proposals:
+        settings:
+          step:
+            amendment_promotion_enabled_help: Las autoras de la enmienda podrán promover la enmienda no aceptada como nueva propuesta.
+            amendment_reaction_enabled_help: Las autoras de la propuesta podrán aceptar o no las enmiendas de otras participantes.
+    proposals:
+      proposals:
+        show:
+          link_to_promoted_emendation_text: Ver la enmienda no aceptada.
+          link_to_proposal_from_emendation_help_text: Esta es una enmienda no aceptada
+          proposal_rejected_reason: 'Esta propuesta no ha sido aceptada porque:'
+      admin:
+        proposal_answers:
+          form:
+            rejected: No aceptada
+      answers:
+        rejected: No aceptada
+      application_helper:
+        filter_state_values:
+          rejected: No aceptada

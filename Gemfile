@@ -13,7 +13,7 @@ gem 'decidim-term_customizer', git: "https://github.com/mainio/decidim-module-te
 
 gem 'rails', '~> 5.2.5'
 gem 'puma'
-gem 'sidekiq', '5.2.7'
+gem 'sidekiq', '6.4.0'
 gem 'sidekiq-cron'
 # Lock sprockets until decidim supports version 4.
 gem 'sprockets', '~> 3.7.2'

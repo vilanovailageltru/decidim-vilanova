@@ -1,12 +1,13 @@
 version: '2'
 services:
   web:
-    image: vilanovailageltru/decidim-vilanova:0.2.1
+    image: vilanovailageltru/decidim-vilanova:0.24.3
     restart: unless-stopped
     env_file: .env
     container_name: decidim_vilanova_web
-    logging:
-      driver: 'none'
+    # Remove if you need logging to debug `docker-compose up`
+    # logging:
+      # driver: 'none'
     ports:
       - 80:80
     volumes:

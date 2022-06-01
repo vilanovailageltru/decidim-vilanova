@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
     env_file: .env
-    image: vilanovailageltru/decidim-vilanova:0.24.3
+    image: vilanovailageltru/decidim-vilanova:latest
     ports:
       - 80:80
     volumes:
@@ -22,7 +22,7 @@ services:
   app-worker:
     command: bundle exec sidekiq -d -L "/var/log/sidekiq.log" -e production -C config/sidekiq.yml
     env_file: .env
-    image: vilanovailageltru/decidim-vilanova:0.24.3
+    image: vilanovailageltru/decidim-vilanova:latest
     volumes:
       - /opt/decidim-vilanova/uploads:/home/app/decidim-vilanova/public/uploads
       - /opt/decidim-vilanova/log:/home/app/decidim-vilanova/log

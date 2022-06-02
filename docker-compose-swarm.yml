@@ -1,0 +1,47 @@
+version: "3"
+services:
+  web:
+    env_file: .env
+    image: vilanovailageltru/decidim-vilanova:latest
+    ports:
+      - 80:80
+    volumes:
+      - /opt/decidim-vilanova/uploads:/home/app/decidim-vilanova/public/uploads
+      - /opt/decidim-vilanova/log:/home/app/decidim-vilanova/log
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+      restart_policy:
+        condition: on-failure
+      labels:
+        - com.df.notify=true
+        - com.df.port=4000
+        - com.df.serviceDomain=participa.vilanova.cat
+ #        - com.df.httpsOnly=true
+  app-worker:
+    command: bundle exec sidekiq -L "/var/log/sidekiq.log" -e production -C config/sidekiq.yml
+    env_file: .env
+    image: vilanovailageltru/decidim-vilanova:latest
+    volumes:
+      - /opt/decidim-vilanova/uploads:/home/app/decidim-vilanova/public/uploads
+      - /opt/decidim-vilanova/log:/home/app/decidim-vilanova/log
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+      restart_policy:
+        condition: on-failure
+  swarm-listener:
+    image: dockerflow/docker-flow-swarm-listener
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DF_NOTIFY_CREATE_SERVICE_URL=http://proxy:8080/v1/docker-flow-proxy/reconfigure
+      - DF_NOTIFY_REMOVE_SERVICE_URL=http://proxy:8080/v1/docker-flow-proxy/remove
+    ports:
+      - 8080:8080
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure

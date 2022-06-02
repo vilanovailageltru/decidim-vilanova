@@ -50,7 +50,6 @@ RUN RAILS_ENV=production SECRET_KEY_BASE=NOT-IMPORTANT bin/rake assets:precompil
 RUN mkdir -p tmp/pids
 
 # Define volumes
-
 VOLUME $HOME/public/uploads
 VOLUME $HOME/log
 

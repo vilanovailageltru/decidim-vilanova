@@ -20,7 +20,7 @@ services:
         - com.df.serviceDomain=participa.vilanova.cat
  #        - com.df.httpsOnly=true
   app-worker:
-    command: bundle exec sidekiq -d -L "/var/log/sidekiq.log" -e production -C config/sidekiq.yml
+    command: bundle exec sidekiq -L "/var/log/sidekiq.log" -e production -C config/sidekiq.yml
     env_file: .env
     image: vilanovailageltru/decidim-vilanova:latest
     volumes:

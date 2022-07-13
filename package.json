@@ -4,7 +4,7 @@
     "@decidim/core": "^0.25.2",
     "@decidim/elections": "^0.25.2",
     "@decidim/webpacker": "^0.25.2",
-    "jquery-mask-plugin": "^1.14.10"
+    "jquery-mask-plugin": "^1.14.16"
   },
   "devDependencies": {
     "@decidim/dev": "^0.25.2",

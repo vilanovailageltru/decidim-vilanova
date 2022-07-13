@@ -1,4 +1,4 @@
-FROM phusion/passenger-ruby27:1.0.12
+FROM phusion/passenger-ruby27:2.1.0
 MAINTAINER Codegram "hello@codegram.com"
 
 ENV HOME /home/app/decidim-vilanova

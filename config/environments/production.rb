@@ -53,4 +53,7 @@ Rails.application.configure do
   end
 
   config.active_record.dump_schema_after_migration = false
+
+# Store uploaded files on the local file system (see config/storage.yml for options)
+  config.active_storage.service = :local
 end

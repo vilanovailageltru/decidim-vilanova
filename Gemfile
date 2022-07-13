@@ -13,6 +13,7 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 
 gem 'puma'
 gem 'sidekiq'
+gem 'sidekiq-cron'
 gem 'uglifier'
 gem 'faker'
 

@@ -1,5 +1,4 @@
 FROM phusion/passenger-full:2.1.0
-
 MAINTAINER Codegram "hello@codegram.com"
 
 ENV HOME /home/app/decidim-vilanova

@@ -6,9 +6,6 @@ Rails.application.configure do
 
   config.public_file_server.enabled = false
 
-  config.assets.js_compressor = Uglifier.new(harmony: true)
-  config.assets.compile = false
-
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
   config.log_level = :info
@@ -53,4 +50,7 @@ Rails.application.configure do
   end
 
   config.active_record.dump_schema_after_migration = false
+
+# Store uploaded files on the local file system (see config/storage.yml for options)
+  config.active_storage.service = :local
 end

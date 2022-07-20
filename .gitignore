@@ -29,3 +29,16 @@ node_modules
 .env
 .env.*
 .rbenv-vars
+
+# Node
+/public/decidim-packs
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep

@@ -1,4 +1,4 @@
-FROM phusion/passenger-ruby27:1.0.12
+FROM phusion/passenger-full:2.1.0
 MAINTAINER Codegram "hello@codegram.com"
 
 ENV HOME /home/app/decidim-vilanova
@@ -30,6 +30,9 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN mkdir -p $HOME
 WORKDIR $HOME
 
+RUN bash -lc 'rvm install ruby-2.7.5'
+RUN bash -lc 'rvm --default use ruby-2.7.5'
+
 RUN gem install bundler -v 1.17.3
 
 # Install bundle of gems
@@ -44,12 +47,16 @@ ADD docker/rails-env.conf /etc/nginx/main.d/rails-env.conf
 # Add the Rails app
 ADD . /home/app/decidim-vilanova
 
+RUN bash -lc 'npm install'
+RUN bash -lc 'npm install --global yarn'
+
 RUN RAILS_ENV=production SECRET_KEY_BASE=NOT-IMPORTANT bin/rake assets:precompile
 
 # Add a tmp folder for pids
 RUN mkdir -p tmp/pids
 
 # Define volumes
+VOLUME $HOME/storage
 VOLUME $HOME/public/uploads
 VOLUME $HOME/log
 

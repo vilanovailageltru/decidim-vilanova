@@ -22,5 +22,21 @@ Decidim.configure do |config|
   # Currency unit
   config.currency_unit = "€"
 
+  # SSL disabled
   config.force_ssl = false
+
+  # Enable HTML header snippets
+  config.enable_html_header_snippets = true
+
+  # Max requests in a time period to prevent DoS attacks. Only applied on production.
+  config.throttling_max_requests = 500
+
+  # Time window in which the throttling is applied.
+  config.throttling_period = 1.minute
 end
+
+Rails.application.config.i18n.available_locales = Decidim.available_locales
+Rails.application.config.i18n.default_locale = Decidim.default_locale
+
+# Inform Decidim about the assets folder
+Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)

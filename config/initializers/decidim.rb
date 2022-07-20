@@ -33,6 +33,9 @@ Decidim.configure do |config|
 
   # Time window in which the throttling is applied.
   config.throttling_period = 1.minute
+
+  # Unconfirmed access
+  config.unconfirmed_access_for = 2.days
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales

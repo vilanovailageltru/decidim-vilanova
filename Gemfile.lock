@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: https://github.com/PopulateTools/decidim-verify_wo_registration.git
-  revision: 1a003576c8b27cf394798e86a7587146d58ac755
-  branch: release/0.25
+  revision: 6fa53b6efa96cdd990fa448e4b087c60eb8ec9e5
+  branch: improve-ui-texts
   specs:
-    decidim-verify_wo_registration (0.0.1)
+    decidim-verify_wo_registration (0.0.3)
       decidim-budgets (>= 0.20)
       decidim-core (>= 0.20)
       decidim-proposals (>= 0.20)

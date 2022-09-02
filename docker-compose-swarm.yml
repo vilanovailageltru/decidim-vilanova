@@ -5,6 +5,7 @@ services:
     image: vilanovailageltru/decidim-vilanova:latest
     ports:
       - 80:80
+      - 443:443
     volumes:
       - /opt/decidim-vilanova/uploads:/home/app/decidim-vilanova/public/uploads
       - /opt/decidim-vilanova/storage:/home/app/decidim-vilanova/storage

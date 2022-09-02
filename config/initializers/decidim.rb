@@ -23,7 +23,7 @@ Decidim.configure do |config|
   config.currency_unit = "€"
 
   # SSL disabled
-  config.force_ssl = false
+  config.force_ssl = true
 
   # Enable HTML header snippets
   config.enable_html_header_snippets = true

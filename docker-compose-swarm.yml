@@ -9,6 +9,7 @@ services:
       - /opt/decidim-vilanova/uploads:/home/app/decidim-vilanova/public/uploads
       - /opt/decidim-vilanova/storage:/home/app/decidim-vilanova/storage
       - /opt/decidim-vilanova/log:/home/app/decidim-vilanova/log
+      - /opt/decidim-vilanova/certs:/home/app/decidim-vilanova/certs
     deploy:
       replicas: 1
       update_config:
@@ -28,6 +29,7 @@ services:
       - /opt/decidim-vilanova/uploads:/home/app/decidim-vilanova/public/uploads
       - /opt/decidim-vilanova/storage:/home/app/decidim-vilanova/storage
       - /opt/decidim-vilanova/log:/home/app/decidim-vilanova/log
+      - /opt/decidim-vilanova/certs:/home/app/decidim-vilanova/certs
     deploy:
       replicas: 1
       update_config:

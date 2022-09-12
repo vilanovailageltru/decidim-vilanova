@@ -1,7 +1,7 @@
 es:
   errors:
     messages:
-      not_censed: 'No constas como censado en Vilanova i la Geltrú'
+      not_censed: 'Según el censo, tus datos no son correctas o no cumples los requisitos para participa.'
       younger_than_16: 'Necesitas tener más de 16 años para participar en la plataforma.'
       invalid_date: 'La fecha no es válida.'
       mini_magick_processing_error: "La manipulación de la imatge ha fallado. ¿Puede que el formato no sea correcto? Error Original: %{e}"

@@ -144,6 +144,35 @@ GIT
     decidim-verifications (0.26.4)
       decidim-core (= 0.26.4)
 
+GIT
+  remote: https://github.com/PopulateTools/decidim-file_authorization_handler.git
+  revision: f1321a46d4d98b9c31b462afbcb174d72c0a22c3
+  branch: support-decidim-0-26-4
+  specs:
+    decidim-file_authorization_handler (0.26.4.5)
+      decidim (~> 0.26.4)
+      decidim-admin (~> 0.26.4)
+      rails (>= 5.2)
+
+GIT
+  remote: https://github.com/PopulateTools/decidim-verify_wo_registration.git
+  revision: 2415caa460e7f228ee9473fc1da58f8fa2991cd7
+  branch: improve-ui-texts
+  specs:
+    decidim-verify_wo_registration (0.0.3)
+      decidim-budgets (>= 0.20)
+      decidim-core (>= 0.20)
+      decidim-proposals (>= 0.20)
+
+GIT
+  remote: https://github.com/mainio/decidim-module-term_customizer.git
+  revision: f0d720710822f1231ea249dd71f978143d38a6c4
+  branch: release/0.26-stable
+  specs:
+    decidim-term_customizer (0.26.0)
+      decidim-admin (~> 0.26.0)
+      decidim-core (~> 0.26.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -797,6 +826,9 @@ DEPENDENCIES
   database_cleaner
   decidim!
   decidim-dev (= 0.26.4)
+  decidim-file_authorization_handler!
+  decidim-term_customizer!
+  decidim-verify_wo_registration!
   faker
   httparty (~> 0.18.1)
   letter_opener_web

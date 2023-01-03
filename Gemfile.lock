@@ -435,8 +435,8 @@ GEM
     highline (2.0.3)
     html_tokenizer (0.0.7)
     htmlentities (4.3.4)
-    httparty (0.18.1)
-      mime-types (~> 3.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -530,6 +530,8 @@ GEM
       net-protocol
     nio4r (2.5.8)
     nokogiri (1.13.10-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
       oauth-tty (~> 1.0, >= 1.0.1)
@@ -820,6 +822,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   byebug
@@ -830,7 +833,7 @@ DEPENDENCIES
   decidim-term_customizer!
   decidim-verify_wo_registration!
   faker
-  httparty (~> 0.18.1)
+  httparty (~> 0.21.0)
   letter_opener_web
   listen
   puma

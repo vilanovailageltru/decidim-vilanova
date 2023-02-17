@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-include Decidim::TranslatableAttributes
-
 namespace :decidim_vilanova do
 
   desc "Export emails of users which created a proposal by participatory process"
@@ -10,7 +8,7 @@ namespace :decidim_vilanova do
 
     processes.each do |process|
       path = "tmp/process_#{process.slug}.csv"
-      puts "=== Exporting data of process #{translated_attribute(process.title)} with slug #{process.slug} to #{path}..."
+      puts "=== Exporting data of process #{process.title.values.compact_blank.first} with slug #{process.slug} to #{path}..."
 
       CSV.open(path, "wb") do |csv|
         components = process.components.where(manifest_name: "proposals")

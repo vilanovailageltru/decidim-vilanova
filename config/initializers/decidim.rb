@@ -36,6 +36,9 @@ Decidim.configure do |config|
 
   # Unconfirmed access
   config.unconfirmed_access_for = 2.days
+
+  # Defines the social networking services used for social sharing
+  config.social_share_services = %w(X Facebook WhatsApp Telegram)
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales

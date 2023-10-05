@@ -7,9 +7,6 @@ Decidim.configure do |config|
     auth.form = 'VilanovaAuthorizationHandler'
   end
 
-  config.available_locales = [:ca, :es]
-  config.default_locale = :ca
-
   # Geocoder configuration
   geocoder_config = Rails.application.secrets.geocoder
   if geocoder_config['here_app_id'].present? && geocoder_config['here_app_code'].present?
@@ -40,9 +37,6 @@ Decidim.configure do |config|
   # Defines the social networking services used for social sharing
   config.social_share_services = %w(X Facebook WhatsApp Telegram)
 end
-
-Rails.application.config.i18n.available_locales = Decidim.available_locales
-Rails.application.config.i18n.default_locale = Decidim.default_locale
 
 # Inform Decidim about the assets folder
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)

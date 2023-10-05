@@ -2,14 +2,14 @@
 
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+ruby '3.2.2'
 
-DECIDIM_VERSION = "0.26.4"
+DECIDIM_VERSION = "0.27.4"
 
-gem 'decidim', git: "https://github.com/PopulateTools/decidim", branch: "release/0.26-stable-budgets-improvements"
+gem "decidim", DECIDIM_VERSION
 gem "decidim-verify_wo_registration", git: "https://github.com/PopulateTools/decidim-verify_wo_registration.git", branch: "improve-ui-texts"
-gem "decidim-file_authorization_handler", git: "https://github.com/PopulateTools/decidim-file_authorization_handler.git", branch: "support-decidim-0-26-4"
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "release/0.26-stable"
+gem "decidim-file_authorization_handler", git: "https://github.com/CodiTramuntana/decidim-file_authorization_handler.git", tag: "v0.27.1.5"
+# gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "release/0.26-stable"
 
 gem 'puma'
 gem 'sidekiq'

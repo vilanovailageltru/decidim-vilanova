@@ -22,6 +22,9 @@
 # Ignore public uploads
 public/uploads
 
+# Ignore Tailwind configuration
+tailwind.config.js
+
 # Ignore application configuration
 /config/application.yml
 

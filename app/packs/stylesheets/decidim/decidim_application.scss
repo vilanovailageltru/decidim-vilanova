@@ -1,22 +1,13 @@
 // // Variables
 
-$primary: #2c5eb9 !default;
-$secondary: #009ED3 !default;
-$success: #57d685 !default;
-$warning: #ffae00 !default;
-$alert: #ec5840 !default;
-
-$proposals: #238FF7 !default;
-$actions: #57D685 !default;
-$debates: #FA6C96 !default;
-$meetings: #FABC6C !default;
-
-$twitter: #55acee !default;
-$facebook: #3b5998 !default;
-$google: #dd4b39 !default;
+$primary: var(--primary);
+$secondary: var(--secondary);
+$success: var(--success);
+$warning: var(--warning);
+$alert: var(--alert);
 
 $white: #fff;
-$black: #1a181d;
+$black: var(--black);
 
 //Layout
 .off-canvas{
@@ -47,10 +38,7 @@ $black: #1a181d;
 }
 
 .main-nav__link--active{
-  box-shadow: inset 4px 0 0 0 $secondary;
-  // @include breakpoint(medium) {
-  //   box-shadow: inset 0 4px 0 0 $secondary;
-  // }
+  @apply shadow-[inset_4px_0_0_0_$secondary] md:shadow-[inset_0_4px_0_0_$secondary];
 }
 
 //Footer

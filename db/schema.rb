@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_05_142555) do
+ActiveRecord::Schema.define(version: 2023_11_30_141438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -545,7 +545,7 @@ ActiveRecord::Schema.define(version: 2023_10_05_142555) do
     t.bigint "resource_id"
     t.string "decidim_author_type"
     t.bigint "decidim_author_id"
-    t.integer "decidim_user_group_id"
+    t.integer "decidim_user_group_id", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["decidim_author_type", "decidim_author_id"], name: "idx_endorsements_authors"
@@ -592,7 +592,7 @@ ActiveRecord::Schema.define(version: 2023_10_05_142555) do
   end
 
   create_table "decidim_forms_answers", id: :serial, force: :cascade do |t|
-    t.jsonb "body", default: []
+    t.text "body"
     t.integer "decidim_user_id"
     t.integer "decidim_questionnaire_id"
     t.integer "decidim_question_id"
@@ -978,7 +978,6 @@ ActiveRecord::Schema.define(version: 2023_10_05_142555) do
     t.string "facebook_handler"
     t.string "youtube_handler"
     t.string "github_handler"
-    t.string "official_img_header"
     t.string "official_img_footer"
     t.string "official_url"
     t.string "reference_prefix", null: false

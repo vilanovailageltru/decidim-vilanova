@@ -8,7 +8,7 @@ ruby '3.1.1'
 
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-verify_wo_registration", git: "https://github.com/PopulateTools/decidim-verify_wo_registration.git", branch: "improve-ui-texts"
+gem "decidim-verify_wo_registration", git: "https://github.com/PopulateTools/decidim-verify_wo_registration.git", branch: "improve-ui-texts-redesign"
 gem "decidim-file_authorization_handler", git: "https://github.com/PopulateTools/decidim-file_authorization_handler.git", branch: "upgrade/redesign"
 # gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "release/0.26-stable"
 

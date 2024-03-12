@@ -194,6 +194,15 @@ GIT
     decidim-verifications (0.28.0)
       decidim-core (= 0.28.0)
 
+GIT
+  remote: https://github.com/mainio/decidim-module-term_customizer.git
+  revision: 03e6c98e85a00fe47f8db2726f1a1a98e808efda
+  branch: master
+  specs:
+    decidim-term_customizer (0.28.0)
+      decidim-admin (~> 0.28.0)
+      decidim-core (~> 0.28.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -819,6 +828,7 @@ DEPENDENCIES
   decidim!
   decidim-dev!
   decidim-file_authorization_handler!
+  decidim-term_customizer!
   decidim-verify_wo_registration!
   faker
   httparty (~> 0.18.1)

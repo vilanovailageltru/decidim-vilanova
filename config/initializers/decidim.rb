@@ -40,3 +40,10 @@ end
 
 # Inform Decidim about the assets folder
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
+
+# API configuration
+Rails.application.config.to_prepare do
+  Decidim::Api::Schema.max_complexity = 5000
+  Decidim::Api::Schema.max_depth = 50
+end
+~

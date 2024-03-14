@@ -30,10 +30,10 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN mkdir -p $HOME
 WORKDIR $HOME
 
-RUN bash -lc 'rvm install ruby-2.7.5'
-RUN bash -lc 'rvm --default use ruby-2.7.5'
+RUN bash -lc 'rvm install ruby-3.1.1'
+RUN bash -lc 'rvm --default use ruby-3.1.1'
 
-RUN gem install bundler -v 1.17.3
+RUN gem install bundler -v 2.4.10
 
 # Install bundle of gems
 ADD Gemfile Gemfile

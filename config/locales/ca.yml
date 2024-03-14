@@ -5,6 +5,25 @@ ca:
       younger_than_16: 'Necessites tenir més de 16 anys per participar en la plataforma.'
       invalid_date: 'La data no és vàlida.'
       mini_magick_processing_error: "La manipulació de la imatge ha fallat. Potser el format no és correcte? Error Original: %{e}"
+  layouts:
+    decidim:
+      footer:
+        cc_by_license: Creative Commons License
+        data_consent_settings: Cookie settings
+        decidim_logo: Decidim Logo
+        decidim_title: Decidim
+        download_open_data: Download Open Data files
+        log_in: Log in
+        made_with_open_source: Website made with <a target="_blank" href="https://github.com/decidim/decidim">free software</a>.
+        resources: Resources
+        sign_up: Sign Up
+        terms_and_conditions: Terms and Conditions
+      header:
+        log_in: Log in
+        main_menu: Main menu
+        user_menu: User menu
+      social_media_links:
+        x: X
   pages:
     home:
       sub_hero:

@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', tag: 'v0.28.0' }.freeze
 
-ruby '2.7.5'
+source "https://rubygems.org"
 
-DECIDIM_VERSION = "0.26.4"
+ruby '3.1.1'
 
-gem 'decidim', git: "https://github.com/PopulateTools/decidim", branch: "release/0.26-stable-budgets-improvements"
-gem "decidim-verify_wo_registration", git: "https://github.com/PopulateTools/decidim-verify_wo_registration.git", branch: "improve-ui-texts"
-gem "decidim-file_authorization_handler", git: "https://github.com/PopulateTools/decidim-file_authorization_handler.git", branch: "support-decidim-0-26-4"
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "release/0.26-stable"
+
+gem "decidim", DECIDIM_VERSION
+gem "decidim-verify_wo_registration", git: "https://github.com/PopulateTools/decidim-verify_wo_registration.git", branch: "improve-ui-texts-redesign"
+gem "decidim-file_authorization_handler", git: "https://github.com/PopulateTools/decidim-file_authorization_handler.git", branch: "upgrade/redesign"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "master"
 
 gem 'puma'
 gem 'sidekiq'

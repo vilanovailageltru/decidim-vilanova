@@ -4,7 +4,7 @@ DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', tag: 'v0.28.0' }.
 
 source "https://rubygems.org"
 
-ruby '3.1.1'
+ruby '3.1.4'
 
 
 gem "decidim", DECIDIM_VERSION

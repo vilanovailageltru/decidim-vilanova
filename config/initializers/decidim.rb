@@ -36,6 +36,17 @@ Decidim.configure do |config|
 
   # Defines the social networking services used for social sharing
   config.social_share_services = %w(X Facebook WhatsApp Telegram)
+
+  config.content_security_policies_extra = {
+    "default-src" => %w('self' 'unsafe-inline'),
+    "script-src" => %w('self' 'unsafe-inline' 'unsafe-eval'),
+    "style-src" => %w('self' 'unsafe-inline'),
+    "img-src" => %w('self' *.hereapi.com data: *.amazonaws.com),
+    "font-src" => %w('self'),
+    "connect-src" => %w('self' *.hereapi.com *.jsdelivr.net *.amazonaws.com),
+    "frame-src" => %w('self' *.youtube.com www.youtube-nocookie.com player.vimeo.com *.google.com *.airtable.com *.flourish.studio),
+    "media-src" => %w('self')
+  }
 end
 
 # Inform Decidim about the assets folder

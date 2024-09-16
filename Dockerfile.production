@@ -30,8 +30,8 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN mkdir -p $HOME
 WORKDIR $HOME
 
-RUN bash -lc 'rvm install ruby-3.1.1'
-RUN bash -lc 'rvm --default use ruby-3.1.1'
+RUN bash -lc 'rvm install ruby-3.1.4'
+RUN bash -lc 'rvm --default use ruby-3.1.4'
 
 RUN gem install bundler -v 2.4.10
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', tag: 'v0.28.2' }.freeze
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', tag: 'v0.28.3' }.freeze
 
 source "https://rubygems.org"
 
@@ -28,8 +28,6 @@ end
 group :development do
   gem 'letter_opener_web'
   gem 'listen'
-  gem 'spring'
-  gem 'spring-watcher-listen'
   gem 'web-console'
 end
 

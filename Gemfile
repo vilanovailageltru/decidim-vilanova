@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', tag: 'v0.28.3' }.freeze
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', tag: 'v0.28.4' }.freeze
 
 source "https://rubygems.org"
 

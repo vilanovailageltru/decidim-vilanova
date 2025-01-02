@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/PopulateTools/decidim-file_authorization_handler.git
-  revision: 54ed004729758bc51baef1a2131974564b34200c
+  revision: a26655ddcc3d14cca5fb7bec2491e16c15ce7f2e
   branch: upgrade/redesign
   specs:
     decidim-file_authorization_handler (0.28.0.0)

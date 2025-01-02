@@ -18,7 +18,7 @@ gem 'sidekiq-cron'
 gem 'uglifier'
 gem 'faker'
 
-gem "httparty", "~> 0.18.1"
+gem "httparty", "~> 0.21.0"
 
 group :development, :test do
   gem 'byebug', platform: :mri

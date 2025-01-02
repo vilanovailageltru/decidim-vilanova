@@ -12,6 +12,11 @@ RUN apt-get update; exit 0
 RUN apt-get --allow-releaseinfo-change update
 RUN apt-get update
 RUN apt-get install -y imagemagick gettext-base tzdata
+RUN apt-get install -y p7zip
+RUN apt-get install -y xfonts-base
+RUN apt-get install -y xfonts-75dpi
+RUN curl "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb" -L -o "wkhtmltox_0.12.6-1.bionic_amd64.deb"
+RUN dpkg -i wkhtmltox_0.12.6-1.bionic_amd64.deb
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]

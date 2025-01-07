@@ -19,6 +19,17 @@ GIT
       decidim-proposals (>= 0.27)
 
 GIT
+  remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
+  revision: 8458de1f810d252d7a52a3d5c9217947cb6e8217
+  branch: users_autoblock
+  specs:
+    decidim-decidim_awesome (0.11.2)
+      decidim-admin (>= 0.28.0, < 0.29)
+      decidim-core (>= 0.28.0, < 0.29)
+      deface (>= 1.5)
+      sassc (~> 2.3)
+
+GIT
   remote: https://github.com/decidim/decidim
   revision: c2c68df8206a241a493efe08e1387b34d6286eae
   tag: v0.28.4
@@ -344,6 +355,12 @@ GEM
     declarative-builder (0.2.0)
       trailblazer-option (~> 0.1.0)
     declarative-option (0.1.0)
+    deface (1.9.0)
+      actionview (>= 5.2)
+      nokogiri (>= 1.6)
+      polyglot
+      railties (>= 5.2)
+      rainbow (>= 2.1.0)
     devise (4.9.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -579,6 +596,7 @@ GEM
     pg_search (2.3.7)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
+    polyglot (0.3.5)
     premailer (1.27.0)
       addressable
       css_parser (>= 1.19.0)
@@ -738,6 +756,8 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (4.27.0)
       base64 (~> 0.2)
       logger (~> 1.4)
@@ -851,6 +871,7 @@ DEPENDENCIES
   byebug
   database_cleaner
   decidim!
+  decidim-decidim_awesome!
   decidim-dev!
   decidim-file_authorization_handler!
   decidim-term_customizer!

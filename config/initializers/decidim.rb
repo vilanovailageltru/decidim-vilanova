@@ -19,8 +19,8 @@ Decidim.configure do |config|
   # Currency unit
   config.currency_unit = "€"
 
-  # SSL disabled
-  config.force_ssl = true
+  # SSL disabled on develomment
+  config.force_ssl = !Rails.env.development?
 
   # Enable HTML header snippets
   config.enable_html_header_snippets = true

@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', tag: 'v0.28.4' }.freeze
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }.freeze
 
 source "https://rubygems.org"
 
 ruby '3.1.4'
-
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-verify_wo_registration", git: "https://github.com/PopulateTools/decidim-verify_wo_registration.git", branch: "improve-ui-texts-redesign"
